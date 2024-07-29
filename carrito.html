@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gisselly Cake's</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <!-- Enlace a una biblioteca de iconos (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Blueberry, sans-serif;
+            background-image: url('https://i.pinimg.com/564x/f9/1e/5a/f91e5a5f6ddf3ebaed3e27637345209c.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        header {
+            background-color: #0cc0df; /* azul pastel */
+            padding: 30px 0;
+            text-align: center; /* Centrar contenido */
+        }
+
+        h1 {
+            font-family: 'Blueberry';
+            src: url('ruta/a/blueberry.ttf') format('truetype'); /* Reemplaza 'ruta/a/blueberry.ttf' con la ruta correcta a tu archivo de fuente .ttf */
+            font-size: 80px; /* Tamaño de la fuente */
+            margin: 0; /* Eliminar margen */
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo img {
+            display: block; /* Para centrar el logo */
+            margin: 0 auto; /* Para centrar el logo */
+            width: 600px;
+        }
+
+        .search {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        .search input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            background-color: white; /* blanco */
+            color: #555; /* color de las letras */
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center; /* Centrar palabras del menú */
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 30px; /* letras un poco más grandes */
+        }
+
+        footer {
+            background-color: #f9d5e5; /* rosa pastel */
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* Definir la fuente Blueberry */
+        @font-face {
+            font-family: 'Blueberry';
+            src: url('ruta/a/blueberry.ttf') format('truetype'); /* Reemplaza 'ruta/a/blueberry.ttf' con la ruta correcta a tu archivo de fuente .ttf */
+        }
+
+        /* Aplicar la fuente Blueberry al nombre */
+        .logo h1 {
+            font-family: 'Blueberry', sans-serif; /* Usamos Blueberry como primera opción, y luego la genérica sans-serif */
+        }
+
+        footer {
+            background-color: #0cc0df; /* azul pastel */
+            color: white; /* Color del texto del pie de página */
+            padding: 10px 20px; /* Espaciado interno del pie de página */
+            text-align: center; /* Alineación centrada */
+        }
+
+        nav ul li a:hover {
+            background-color: #0cc0df; /* Cambiar el color de fondo al pasar el cursor */
+            padding: 15px;
+        }
+
+        footer p {
+            margin-bottom: 10px; /* Espacio inferior */
+        }
+
+        .redes-sociales a {
+            color: white; /* Color de los iconos */
+            margin: 0 10px; /* Espacio horizontal entre iconos */
+            font-size: 24px; /* Tamaño del icono */
+            transition: color 0.3s; /* Transición suave del color */
+        }
+
+        .redes-sociales a:hover {
+            text-decoration: underline; /* Cambiar color al pasar el mouse */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center; /* Centrar palabras del menú */
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 30px; /* letras un poco más grandes */
+        }
+
+        /* Estilos para el formulario modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .additional-fields {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ASRED</h1>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="CONOCE.html">Conoce</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="cliente.html">Registrate</a></li>
+                    <li><a href="CUR.html">Cursos</a></li>
+                    <li><a href="carrito.html">Carrito</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>Productos en el Carrito</h2>
+            <ul id="listaCarrito">
+                <!-- Aquí se mostrarán los productos agregados al carrito -->
+            </ul>
+            <p>Total: <span id="totalCarrito">$0.00</span></p>
+            <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+            <button id="comprarBtn">Comprar</button>
+        </div>
+    </main>
+
+    <!-- Formulario Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Opciones de Pago</h2>
+            <form id="paymentForm">
+                <div>
+                    <input type="radio" id="credito" name="payment" value="credito">
+                    <label for="credito">Tarjeta de Crédito</label>
+                </div>
+                <div>
+                    <input type="radio" id="paypal" name="payment" value="paypal">
+                    <label for="paypal">PayPal</label>
+                </div>
+                <div>
+                    <input type="radio" id="transferencia" name="payment" value="transferencia">
+                    <label for="transferencia">Transferencia</label>
+                </div>
+                <div>
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div>
+                    <label for="direccion">Dirección:</label>
+                    <input type="text" id="direccion" name="direccion" required>
+                </div>
+                
+                <!-- Campos adicionales -->
+                <div id="creditoFields" class="additional-fields">
+                    <label for="creditoNumero">Número de Tarjeta:</label>
+                    <input type="text" id="creditoNumero" name="creditoNumero">
+                    <label for="creditoFecha">Fecha de Expiración:</label>
+                    <input type="text" id="creditoFecha" name="creditoFecha">
+                    <label for="creditoCVV">CVV:</label>
+                    <input type="text" id="creditoCVV" name="creditoCVV">
+                </div>
+                
+                <div id="paypalFields" class="additional-fields">
+                    <label for="paypalEmail">Email de PayPal:</label>
+                    <input type="email" id="paypalEmail" name="paypalEmail">
+                </div>
+                
+                <div id="transferenciaFields" class="additional-fields">
+                    <label for="transferenciaBanco">Banco:</label>
+                    <input type="text" id="transferenciaBanco" name="transferenciaBanco">
+                    <label for="transferenciaCuenta">Número de Cuenta:</label>
+                    <input type="text" id="transferenciaCuenta" name="transferenciaCuenta">
+                </div>
+
+                <button type="submit">Pagar</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>Síguenos en nuestras redes sociales:</p>
+        <div class="redes-sociales">
+            <a href="https://m.facebook.com/profile.php?mibextid=LQQJ4d" target="_blank"><img src="C:\Users\alexa\Downloads\2023_Facebook_icon.svg"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/gissellypaz?igsh=c2N5OHBxc2I4OXRh&utm_source=qr"><i class="fab fa-instagram"></i></a>
+            <!-- Agrega más iconos de redes sociales según sea necesario -->
+        </div>
+        <p>&copy; 2024 <br> STEFANY ARRIAGA</p>
+    </footer>
+
+    <script>
+        // Función para mostrar los productos en el carrito
+        function mostrarCarrito() {
+            var listaCarrito = document.getElementById("listaCarrito");
+            var totalCarrito = 0;
+
+            // Limpiar la lista antes de mostrar los productos
+            listaCarrito.innerHTML = "";
+
+            // Recuperar los productos del localStorage
+            var carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+            // Recorrer el carrito y mostrar cada producto
+            carrito.forEach(function(producto) {
+                var subtotal = producto.precio * producto.cantidad;
+                totalCarrito += subtotal;
+
+                var li = document.createElement("li");
+                li.textContent = producto.nombre + " x " + producto.cantidad + " - L" + subtotal.toFixed(2);
+                listaCarrito.appendChild(li);
+            });
+
+            // Actualizar el total del carrito
+            document.getElementById("totalCarrito").textContent = "L" + totalCarrito.toFixed(2);
+        }
+
+        // Función para vaciar el carrito
+        function vaciarCarrito() {
+            // Vaciar el localStorage
+            localStorage.removeItem("carrito");
+
+            // Actualizar la visualización del carrito
+            mostrarCarrito();
+        }
+
+        // Llamar a la función mostrarCarrito cuando se cargue la página
+        mostrarCarrito();
+
+        // Modal JavaScript
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("comprarBtn");
+        var span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Mostrar campos adicionales según el método de pago seleccionado
+        var paymentRadios = document.getElementsByName("payment");
+        var creditoFields = document.getElementById("creditoFields");
+        var paypalFields = document.getElementById("paypalFields");
+        var transferenciaFields = document.getElementById("transferenciaFields");
+
+        paymentRadios.forEach(function(radio) {
+            radio.addEventListener("change", function() {
+                creditoFields.style.display = "none";
+                paypalFields.style.display = "none";
+                transferenciaFields.style.display = "none";
+
+                if (radio.value === "credito") {
+                    creditoFields.style.display = "block";
+                } else if (radio.value === "paypal") {
+                    paypalFields.style.display = "block";
+                } else if (radio.value === "transferencia") {
+                    transferenciaFields.style.display = "block";
+                }
+            });
+        });
+    </script>
+</body>
+</html>

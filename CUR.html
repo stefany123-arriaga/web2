@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gisselly Cake's</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <!-- Enlace a una biblioteca de iconos (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Blueberry, sans-serif;
+            background-image: url('https://i.pinimg.com/564x/f9/1e/5a/f91e5a5f6ddf3ebaed3e27637345209c.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        header {
+            background-color: #0cc0df; /* rosa pastel */
+            padding: 30px 0;
+            text-align: center; /* Centrar contenido */
+        }
+
+        h1 {
+            font-family: 'Blueberry';
+            src: url('ruta/a/blueberry.ttf') format('truetype'); /* Reemplaza 'ruta/a/blueberry.ttf' con la ruta correcta a tu archivo de fuente .ttf */
+            font-size: 80px; /* Tamaño de la fuente */
+            margin: 0; /* Eliminar margen */
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo img {
+            display: block; /* Para centrar el logo */
+            margin: 0 auto; /* Para centrar el logo */
+            width: 600px;
+        }
+
+        .search {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        .search input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            background-color: white; /* blanco */
+            color: #555; /* color de las letras */
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center; /* Centrar palabras del menú */
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 30px; /* letras un poco más grandes */
+        }
+
+        footer {
+            background-color: #f9d5e5; /* rosa pastel */
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* Definir la fuente Blueberry */
+        @font-face {
+            font-family: 'Blueberry';
+            src: url('ruta/a/blueberry.ttf') format('truetype'); /* Reemplaza 'ruta/a/blueberry.ttf' con la ruta correcta a tu archivo de fuente .ttf */
+        }
+
+        /* Aplicar la fuente Blueberry al nombre */
+        .logo h1 {
+            font-family: 'Blueberry', sans-serif; /* Usamos Blueberry como primera opción, y luego la genérica sans-serif */
+        }
+
+        footer {
+            background-color: #0cc0df; /* rosa pastel /; / Color de fondo del pie de página */
+            color: white; /* Color del texto del pie de página */
+            padding: 10px 20px; /* Espaciado interno del pie de página */
+            text-align: center; /* Alineación centrada */
+        }
+
+        nav ul li a:hover {
+            background-color: #0cc0df; /* Cambiar el color de fondo al pasar el cursor */
+            padding: 15px;
+        }
+
+        footer p {
+            margin-bottom: 10px; /* Espacio inferior */
+        }
+
+        .redes-sociales a {
+            color: white; /* Color de los iconos */
+            margin: 0 10px; /* Espacio horizontal entre iconos */
+            font-size: 24px; /* Tamaño del icono */
+            transition: color 0.3s; /* Transición suave del color */
+        }
+
+        .redes-sociales a:hover {
+            text-decoration: underline; /* Cambiar color al pasar el mouse */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center; /* Centrar palabras del menú */
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 30px; /* letras un poco más grandes */
+        }
+
+        .classification {
+            text-align: center; /* Centrar contenido de la sección */
+        }
+
+        .classification p {
+            margin: 10px 0;
+        }
+
+        .course-example {
+            margin: 20px 0;
+        }
+
+        .course-example img {
+            width: 200px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <h1 class="logo-title">ASRED</h1>
+        <nav>
+            <ul> <li><a href="index.html">Inicio</a></li>
+                    <li><a href="CONOCE.html">Conoce</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="cliente.html">Registrate</a></li>
+                    <li><a href="CUR.html">Cursos</a></li>
+                    <li><a href="carrito.html">Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="classification">
+            <center>
+                <h2>Cursos</h2>
+            </center>
+            <strong><p>Ofrecemos cursos para postres de alta categoría. Aquí algunos ejemplos:</p></strong>
+
+            <div class="course-example">
+                <strong><p>1. Curso de Pasteles de Bodas</p></strong>
+                <img src="https://i.pinimg.com/564x/f9/56/e2/f956e2261b514ca560b6c19167bb0601.jpg" alt="Pastel de Bodas">
+            </div>
+
+            <div class="course-example">
+                <strong><p>2. Curso de Macarons Franceses</p></strong>
+                <img src="https://i.pinimg.com/564x/cc/c3/12/ccc312473bd126d902233215a9139dcd.jpg" alt="Macarons Franceses">
+            </div>
+
+            <div class="course-example">
+                <strong><p>3. Curso de Tartas de Frutas</p></strong>
+                <img src="https://i.pinimg.com/564x/54/06/51/540651f51e0bc9bc467931e8101cedf1.jpg" alt="Tarta de Frutas">
+            </div>
+
+            <div class="course-example">
+                <strong><p>4. Curso de Postres Sin Gluten</p></strong>
+                <img src="https://i.pinimg.com/564x/c9/4e/17/c94e17cd97d982cb27a1490882f03678.jpg" alt="Postres Sin Gluten">
+            </div>
+
+            <div class="course-example">
+                <strong><p>5. Curso de Chocolatería Fina</p></strong>
+                <img src="https://i.pinimg.com/564x/cc/77/ea/cc77ea35e97791c8a28ba4692d69cd38.jpg" alt="Chocolatería Fina">
+            </div>
+
+            <strong><p>Para recibir información más avanzada en el mundo de la repostería, puedes contactarnos en nuestras redes sociales o en nuestro WhatsApp:</p></strong>
+            <p>8979-3852</p>
+        </section>
+    </main>
+    
+   <footer>
+        <p>Síguenos en nuestras redes sociales:</p>
+        <div class="redes-sociales">
+            <a href="https://m.facebook.com/profile.php?mibextid=LQQJ4d" target="_blank"><img src="C:\Users\alexa\Downloads\2023_Facebook_icon.svg"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/gissellypaz?igsh=c2N5OHBxc2I4OXRh&utm_source=qr"><i class="fab fa-instagram"></i></a>
+            <!-- Agrega más iconos de redes sociales según sea necesario -->
+        </div>
+        <p>&copy; 2024 <br> STEFANY ARRIAGA</p>
+    </footer>
+</body>
+</html>

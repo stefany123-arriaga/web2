@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gisselly Cake's</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <!-- Enlace a una biblioteca de iconos (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Blueberry, sans-serif;
+            background-image: url('https://i.pinimg.com/564x/f9/1e/5a/f91e5a5f6ddf3ebaed3e27637345209c.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        header {
+            background-color: #0cc0df; /* rosa pastel */
+            padding: 30px 0;
+            text-align: center; /* Centrar contenido */
+        }
+
+        h1 {
+            font-family: 'Blueberry';
+            src: url('ruta/a/blueberry.ttf') format('truetype'); /* Reemplaza 'ruta/a/blueberry.ttf' con la ruta correcta a tu archivo de fuente .ttf */
+            font-size: 80px; /* Tamaño de la fuente */
+            margin: 0; /* Eliminar margen */
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo img {
+            display: block; /* Para centrar el logo */
+            margin: 0 auto; /* Para centrar el logo */
+            width: 600px;
+        }
+
+        .search {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        .search input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            background-color: white; /* blanco */
+            color: #555; /* color de las letras */
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center; /* Centrar palabras del menú */
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 30px; /* letras un poco más grandes */
+        }
+
+        footer {
+            background-color: #f9d5e5; /* rosa pastel */
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* Definir la fuente Blueberry */
+        @font-face {
+            font-family: 'Blueberry';
+            src: url('ruta/a/blueberry.ttf') format('truetype'); /* Reemplaza 'ruta/a/blueberry.ttf' con la ruta correcta a tu archivo de fuente .ttf */
+        }
+
+        /* Aplicar la fuente Blueberry al nombre */
+        .logo h1 {
+            font-family: 'Blueberry', sans-serif; /* Usamos Blueberry como primera opción, y luego la genérica sans-serif */
+        }
+
+        footer {
+            background-color: #0cc0df; /* rosa pastel /; / Color de fondo del pie de página */
+            color: white; /* Color del texto del pie de página */
+            padding: 10px 20px; /* Espaciado interno del pie de página */
+            text-align: center; /* Alineación centrada */
+        }
+
+        nav ul li a:hover {
+            background-color:  #0cc0df; /* Cambiar el color de fondo al pasar el cursor */
+            padding: 15px;
+        }
+
+        footer p {
+            margin-bottom: 10px; /* Espacio inferior */
+        }
+
+        .redes-sociales a {
+            color: white; /* Color de los iconos */
+            margin: 0 10px; /* Espacio horizontal entre iconos */
+            font-size: 24px; /* Tamaño del icono */
+            transition: color 0.3s; /* Transición suave del color */
+        }
+
+        .redes-sociales a:hover {
+            text-decoration: underline; /* Cambiar color al pasar el mouse */
+        }
+        
+        .productos {
+            display: flex;
+            justify-content: center; /* Centrar los elementos horizontalmente */
+            flex-wrap: wrap; /* Permitir que los elementos se envuelvan en varias líneas */
+        }
+        
+        .productos img {
+            width: 200px; /* Ancho de las imágenes */
+            height: 200px; /* Alto de las imágenes */
+            margin: 10px; /* Espacio entre las imágenes */
+            object-fit: cover; /* Escalar la imagen para que llene el contenedor */
+            cursor: pointer;
+        }
+        
+        .producto-descripcion {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            z-index: 1000;
+            border: 2px solid black;
+        }
+
+        .descripcion-visible {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ASRED</h1>
+        <div class="container">
+            <nav>
+                <ul>
+                   <li><a href="index.html">Inicio</a></li>
+                    <li><a href="CONOCE.html">Conoce</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="cliente.html">Registrate</a></li>
+                    <li><a href="CUR.html">Cursos</a></li>
+                    <li><a href="carrito.html">Carrito</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2 style="text-align: center; width: 100%;">Productos Disponibles</h2>
+
+            <!-- División de "Pasteles de Cumpleaños" -->
+            <center><h3>Pasteles de Cumpleaños</h3></center>
+            <div class="productos">
+                <!-- Producto 1 -->
+                <img class="producto-imagen" src="https://i.pinimg.com/564x/b2/dc/a5/b2dca518991369661fb591b08f9eeb6b.jpg" alt="Pastel de Cumpleaños" onclick="mostrarDescripcion('Pastel de Cumpleaños ', 'Delicioso pastel de cumpleaños para 20 personas.', 'L1000.00')">
+                <!-- Producto 2 -->
+                <img class="producto-imagen" src="https://i.pinimg.com/564x/51/b7/c5/51b7c50d6de4b046190f461f475ca040.jpg" alt="Pastel de Cumpleaños " onclick="mostrarDescripcion('Pastel de Cumpleaños ', 'Delicioso pastel de cumpleaños para 20 personas.', 'L900.00')">
+                <!-- Agrega más productos aquí si es necesario -->
+            </div>
+
+            <!-- División de "Postres de Cumpleaños" -->
+            <center><h3>Postres de Cumpleaños</h3></center>
+            <div class="productos">
+                <!-- Producto 3 -->
+                <img class="producto-imagen" src="https://i.pinimg.com/564x/45/ce/ae/45ceaeabf8a96217a98aaa67a71c7fba.jpg" alt="Postre de Cumpleaños 1" onclick="mostrarDescripcion('Mini donas glaseadas', '6 unidades de donitas glaceadas', 'L150.00')">
+                <!-- Producto 4 -->
+                <img class="producto-imagen" src="https://i.pinimg.com/564x/7b/a2/6a/7ba26aaa3f75292a9770fdcc94e681d5.jpg" alt="Postre de Cumpleaños 2" onclick="mostrarDescripcion('Fresas cubiertas de chocolate', '6 Fresas cubiertas de chocolate', 'L100.00')">
+                <!-- Agrega más productos aquí si es necesario -->
+            </div>
+
+            <!-- División de "Pasteles de Bodas" -->
+            <center><h3>Pasteles de Bodas</h3></center>
+            <div class="productos">
+                <!-- Producto 5 -->
+                <img class="producto-imagen" src="https://i.pinimg.com/564x/a9/b5/90/a9b590276728f2d1f3d81aa3d264733d.jpg" alt="Pastel de Bodas 1" onclick="mostrarDescripcion('Pastel de Bodas ', 'Elegante y delicioso Pastel de bodas para 200 personas', 'L3000.00')">
+                <!-- Producto 6 -->
+                <img class="producto-imagen" src="https://i.pinimg.com/564x/f9/56/e2/f956e2261b514ca560b6c19167bb0601.jpg" alt="Pastel de Bodas 2" onclick="mostrarDescripcion('Pastel de Bodas ', 'Elegante y delicioso pastel de bodas para 300 personas.', 'L5500.00')">
+                <!-- Agrega más productos aquí si es necesario -->
+            </div>
+
+            <!-- División de "Postres de Bodas" -->
+            <center><h3>Postres de Bodas</h3></center>
+            <div class="productos">
+                <!-- Producto 7 -->
+                <img class="producto-imagen" src="https://i.pinimg.com/564x/bf/bb/d9/bfbbd91c30a82366477f3e211f288559.jpg" alt="Postre de Bodas 1" onclick="mostrarDescripcion('Cupcake de pareja', 'Deliciosos cupcake con forma de novio y novia, 6 unidades.', 'L250.00')">
+                <!-- Producto 8 -->
+                <img class="producto-imagen" src="https://i.pinimg.com/564x/bb/5a/af/bb5aaf8448a076ec0d96aaa953e4a662.jpg" alt="Postre de Bodas 2" onclick="mostrarDescripcion('Galletas', 'Deliciosas galletas con glaseado blanco elegantes,6 unidades.', 'L200.00')">
+                <!-- Agrega más productos aquí si es necesario -->
+            </div>
+
+            <!-- Descripción del Producto -->
+            <div id="descripcionProducto" class="producto-descripcion">
+                <h2 id="nombreProducto"></h2>
+                <p id="detalleProducto"></p>
+                <p id="precioProducto"></p>
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" value="1" min="1">
+                <button onclick="agregarAlCarrito()">Agregar al Carrito</button>
+                <button onclick="cerrarDescripcion()">Cerrar</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Síguenos en nuestras redes sociales:</p>
+        <div class="redes-sociales">
+            <a href="https://m.facebook.com/profile.php?mibextid=LQQJ4d" target="_blank"><img src="C:\Users\alexa\Downloads\2023_Facebook_icon.svg"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/gissellypaz?igsh=c2N5OHBxc2I4OXRh&utm_source=qr"><i class="fab fa-instagram"></i></a>
+            <!-- Agrega más iconos de redes sociales según sea necesario -->
+        </div>
+        <p>&copy; 2024 <br> STEFANY ARRIAGA</p>
+    </footer>
+
+    <script>
+        function mostrarDescripcion(nombre, detalle, precio) {
+            document.getElementById("nombreProducto").textContent = nombre;
+            document.getElementById("detalleProducto").textContent = detalle;
+            document.getElementById("precioProducto").textContent = "Precio: " + precio;
+            document.getElementById("descripcionProducto").classList.add("descripcion-visible");
+        }
+
+        function cerrarDescripcion() {
+            document.getElementById("descripcionProducto").classList.remove("descripcion-visible");
+        }
+
+        function agregarAlCarrito() {
+            var nombre = document.getElementById("nombreProducto").textContent;
+            var cantidad = parseInt(document.getElementById("cantidad").value);
+            var precio = parseFloat(document.getElementById("precioProducto").textContent.replace("Precio: ", "").replace("L", ""));
+            
+            // Agregar el producto al localStorage
+            var producto = {
+                nombre: nombre,
+                precio: precio,
+                cantidad: cantidad
+            };
+            var carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+            carrito.push(producto);
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+            
+            // Mostrar mensaje de confirmación
+            alert("Se ha agregado " + cantidad + " " + nombre + "(s) al carrito.");
+        }
+    </script>
+</body>
+</html>
